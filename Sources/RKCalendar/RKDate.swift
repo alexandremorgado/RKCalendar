@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RKDate {
+public struct RKDate {
     
     var date: Date
     let rkManager: RKManager
@@ -19,7 +19,7 @@ struct RKDate {
     var isBetweenStartAndEnd: Bool = false
     
 
-    init(date: Date, rkManager: RKManager) {
+    public init(date: Date, rkManager: RKManager) {
         self.date = date
         self.rkManager = rkManager
         self.isDisabled = !rkManager.isEnabled(date: date)

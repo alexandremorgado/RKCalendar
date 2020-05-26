@@ -36,7 +36,7 @@ public struct RKMonth: View {
         self.rkManager.isWeeklyView ? AnyView(self.weeklyView) : AnyView(self.monthlyView)
     }
     
-    var monthlyView: some View {
+    public var monthlyView: some View {
         VStack(alignment: .leading, spacing: 10) {
             ForEach(monthsArray, id:  \.self) { row in
                 HStack() {
@@ -62,11 +62,11 @@ public struct RKMonth: View {
         }
     }
     
-    var weeklyView: some View {
+    public var weeklyView: some View {
         weekOffset == nil ? AnyView(self.weeklyViewContinuous) : AnyView(self.weeklyViewPage)
     }
     
-    var weeklyViewPage: some View {
+    public var weeklyViewPage: some View {
         HStack(spacing: 10) {
             ForEach(monthsArray[weekOffset!], id:  \.self) { column in
                 HStack {
@@ -88,7 +88,7 @@ public struct RKMonth: View {
         }
     }
     
-    var weeklyViewContinuous: some View {
+    public var weeklyViewContinuous: some View {
         HStack(spacing: 10) {
             ForEach(monthsArray, id:  \.self) { row in
                 HStack(spacing: 15) {

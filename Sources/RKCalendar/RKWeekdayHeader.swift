@@ -10,7 +10,7 @@ import SwiftUI
 
 public struct RKWeekdayHeader : View {
     
-    var rkManager: RKManager
+    public var rkManager: RKManager
      
     public var body: some View {
         HStack(alignment: .center) {

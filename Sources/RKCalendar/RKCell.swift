@@ -8,16 +8,16 @@
 
 import SwiftUI
 
-struct RKCell: View {
+public struct RKCell: View {
     
     var rkDate: RKDate
     var cellWidth: CGFloat
     
     // this is used only to refresh the view
-    @Binding var hasTime: Bool
+    @Binding public var hasTime: Bool
     
 
-    var body: some View {
+    public var body: some View {
         VStack {
             Text(rkDate.getText())
                 .fontWeight(rkDate.getFontWeight())
