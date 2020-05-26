@@ -14,9 +14,9 @@ import Foundation
 
 public struct RKPageView<Content: View & Identifiable>: View {
     
-    @ObservedObject var rkManager: RKManager
+    @ObservedObject public var rkManager: RKManager
     
-    var pages: [Content]
+    public var pages: [Content]
     
     @State private var index: Int = 0
     @State private var offset: CGFloat = 0

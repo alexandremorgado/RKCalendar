@@ -12,10 +12,10 @@ import SwiftUI
 public struct RKWeeklyPage: View, Identifiable {
     public let id = UUID()
     
-    @Binding var isPresented: Bool
-    @ObservedObject var rkManager: RKManager
-    @State var monthNdx: Int
-    @State var weekNdx: Int
+    @Binding public var isPresented: Bool
+    @ObservedObject public var rkManager: RKManager
+    @State public var monthNdx: Int
+    @State public var weekNdx: Int
     
     public var body: some View {
         VStack(spacing: 15) {
